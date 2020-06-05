@@ -6,16 +6,16 @@ cursor = conn.cursor()
 
 # Создаем таблицу blog с шестью полями - id , name , kurs , group , dolg , items
 try:
-    cursor.execute('''CREATE TABLE blog (id integer, name text, kurs integer, group integer, dolg integer, items text)''')
+    cursor.execute('''CREATE TABLE blog (id integer, name text, kurs integer, gr integer, dolg integer, items text)''')
 except:
     pass
 
 # Вставляем в таблицу blog первую запись со значениями id , name , kurs , group , dolg , items
-cursor.execute("INSERT INTO blog (id , name , kurs , group , dolg , items) VALUES (' ID', 'ФИО', 'курс', 'группа', 'количество задолженностей', 'предметы')")
+cursor.execute("INSERT INTO blog (id , name , kurs , gr , dolg , items) VALUES (' ID', 'ФИО', 'курс', 'группа', 'количество задолженностей', 'предметы')")
 conn.commit()
 
 # Вставляем в таблицу blog вторую запись со значениями id , name , kurs , group , dolg , items
-cursor.execute("INSERT INTO blog (id , name , kurs , group , dolg , items) VALUES (' ID', 'ФИО', 'курс', 'группа', 'количество задолженностей', 'предметы')")
+cursor.execute("INSERT INTO blog (id , name , kurs , gr , dolg , items) VALUES (' ID', 'ФИО', 'курс', 'группа', 'количество задолженностей', 'предметы')")
 conn.commit()
 
 # Делаем выборку всех имеющихся в таблице записей и в цикле печатаем их значения
